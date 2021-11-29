@@ -71,5 +71,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^4.5.1"
   }
 }

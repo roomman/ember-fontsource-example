@@ -30,6 +30,17 @@ module.exports = function (defaults) {
     staticComponents: true,
     packagerOptions: {
       webpackConfig: {
+        module: {
+          rules: [
+            {
+              test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+              type: 'asset/resource',
+              generator: {
+                filename: 'fonts/[hash][ext][query]',
+              },
+            },
+          ],
+        },
         plugins: [new BundleAnalyzerPlugin()],
       },
     },
